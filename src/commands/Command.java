@@ -1,7 +1,11 @@
 package commands;
 
+import exceptions.InvalidArgumentTypeException;
+import exceptions.InvalidArgumentsCountException;
+
 public interface Command {
 
-public void execute(ArgumentsList argumentsList);
+void execute(ArgumentsList argumentsList, CalculationContext context) throws InvalidArgumentsCountException,
+        InvalidArgumentTypeException;
 
 }

@@ -14,7 +14,7 @@ public class CommandFactory {
             InputStream in = CommandFactory.class.getResourceAsStream("commands_config.properties");
             prop.load(in);
             String className = prop.getProperty(type);
-            System.out.println(type + "-" + className);
+            // System.out.println(type + "-" + className);
             return (Command)Class.forName(className).getDeclaredConstructor().newInstance();
         } catch (IOException | ClassNotFoundException | NoSuchMethodException
                 | IllegalAccessException | InvocationTargetException | InstantiationException e) {

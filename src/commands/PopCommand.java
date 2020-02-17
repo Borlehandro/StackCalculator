@@ -2,7 +2,7 @@ package commands;
 
 public class PopCommand implements Command {
     @Override
-    public void execute(ArgumentsList argumentsList) {
+    public void execute(ArgumentsList argumentsList,CalculationContext context) {
 
     }
 }
