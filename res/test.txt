@@ -1,0 +1,5 @@
+# Test it
+PUSH 2
+PUSH 2
++
+POP
