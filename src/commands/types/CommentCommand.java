@@ -1,4 +1,7 @@
-package commands;
+package commands.types;
+
+import commands.ArgumentsList;
+import commands.CalculationContext;
 
 public class CommentCommand implements Command {
 

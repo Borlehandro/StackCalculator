@@ -15,7 +15,9 @@ public class CalculationContext {
         stack.push(s);
     }
 
-    public Double pop() {
+    public Double pop() throws EmptyStackException {
+        if(stack.size() == 0)
+            throw new EmptyStackException();
         return stack.pop();
     }
 
@@ -25,5 +27,9 @@ public class CalculationContext {
 
     public Double getValue(String key) {
         return definitions.get(key);
+    }
+
+    public boolean containsVar(String key) {
+        return definitions.containsKey(key);
     }
 }

@@ -1,7 +1,6 @@
 # Test it
 DEFINE A 2
 PUSH 2
-PUSH B
 +
 PRINT
 SQRT

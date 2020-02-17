@@ -1,6 +1,6 @@
-package commands.factorys;
+package commands;
 
-import commands.Command;
+import commands.types.Command;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +11,7 @@ public class CommandFactory {
     public Command create(String type) {
         try {
             Properties prop = new Properties();
-            InputStream in = CommandFactory.class.getResourceAsStream("commands_config.properties");
+            InputStream in = this.getClass().getResourceAsStream("/commands/commands_config.properties");
             prop.load(in);
             String className = prop.getProperty(type);
             // System.out.println(type + "-" + className);

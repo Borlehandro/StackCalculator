@@ -1,16 +1,19 @@
-package commands;
+package commands.types;
 
+import commands.ArgumentsList;
+import commands.CalculationContext;
 import exceptions.InvalidArgumentsCountException;
 
-public class DefineCommand implements Command {
-
+public class PrintCommand implements Command {
     @Override
     public void execute(ArgumentsList argumentsList, CalculationContext context)
             throws InvalidArgumentsCountException {
 
-        if (argumentsList.size() != 2)
+        if(argumentsList.size()!=0)
             throw new InvalidArgumentsCountException();
-        context.define(argumentsList.get(0), Double.valueOf(argumentsList.get(1)));
+
+        // Todo exception
+        System.err.println(context.getTop());
 
     }
 }

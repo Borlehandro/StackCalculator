@@ -1,9 +1,11 @@
 import commands.ArgumentsList;
 import commands.CalculationContext;
-import commands.Command;
-import commands.factorys.CommandFactory;
+import commands.types.Command;
+import commands.CommandFactory;
+import exceptions.EmptyStackException;
 import exceptions.InvalidArgumentTypeException;
 import exceptions.InvalidArgumentsCountException;
+import exceptions.InvalidVarNameException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,10 +43,16 @@ public class Main {
             System.err.println(e.getMessage());
         } catch (InvalidArgumentsCountException e) {
             System.err.println("Invalid arguments count");
-            e.printStackTrace();
+            // e.printStackTrace();
         } catch (InvalidArgumentTypeException e) {
             System.err.println("Invalid argument type");
-            e.printStackTrace();
+            // e.printStackTrace();
+        } catch (InvalidVarNameException e) {
+            System.err.println("Invalid variable");
+            // e.printStackTrace();
+        } catch (EmptyStackException e) {
+            System.err.println("Empty stack");
+            // e.printStackTrace();
         }
 
         // System.err.println(command.getClass());
