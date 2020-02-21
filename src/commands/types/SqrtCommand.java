@@ -11,7 +11,7 @@ public class SqrtCommand implements Command {
             throws InvalidArgumentsCountException, CalculationStackException {
 
         if (argumentsList.size() != 0)
-            throw new InvalidArgumentsCountException("SQRT", 0, argumentsList.size());
+            throw new InvalidArgumentsCountException("SQRT", 0, argumentsList.size(), context.getStep());
 
         // Todo complex square?
         context.push(Math.sqrt(context.pop()));

@@ -1,13 +1,13 @@
 package exceptions;
 
-public class InvalidArgumentTypeException extends Exception {
+public class InvalidArgumentTypeException extends ExecuteTimeException {
 
     String normalType, currentType;
     String operation;
     Object value;
 
-    public InvalidArgumentTypeException(String operation, String normal, String current, Object val) {
-        super("InvalidArgumentTypeException");
+    public InvalidArgumentTypeException(String operation, String normal, String current, Object val, long step) {
+        super(step);
         this.normalType = normal;
         this.currentType = current;
         this.operation = operation;
@@ -17,6 +17,7 @@ public class InvalidArgumentTypeException extends Exception {
     @Override
     public String getMessage() {
         return  "Incorrect argument type for operation \"" + operation +
-                "\" : value \"" + value + "\" has type " + currentType + " instead of " + normalType;
+                "\" in step " + step + " - value \"" + value +
+                "\" has type " + currentType + " instead of " + normalType;
     }
 }

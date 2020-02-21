@@ -8,6 +8,7 @@ public class CalculationContext {
 
     private LinkedList<Double> stack = new LinkedList<>();
     private Map<String, Double> definitions = new HashMap<>();
+    private long step = 0;
 
     public void define(String name, Double value) {
         definitions.put(name, value);
@@ -19,7 +20,7 @@ public class CalculationContext {
 
     public Double pop() throws CalculationStackException {
         if(stack.size() == 0) {
-            throw new CalculationStackException();
+            throw new CalculationStackException(step);
         }
         return stack.pop();
     }
@@ -27,7 +28,7 @@ public class CalculationContext {
     public Double getTop() throws CalculationStackException {
 
         if(stack.size() == 0) {
-            throw new CalculationStackException();
+            throw new CalculationStackException(step);
         }
 
         return stack.peek();
@@ -40,4 +41,13 @@ public class CalculationContext {
     public boolean containsVar(String key) {
         return definitions.containsKey(key);
     }
+
+    public void next() {
+        step++;
+    }
+
+    public long getStep() {
+        return step;
+    }
+
 }

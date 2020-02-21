@@ -13,7 +13,7 @@ public class PopCommand implements Command {
             throws InvalidArgumentsCountException, EmptyStackException, CalculationStackException {
 
         if(argumentsList.size()!=0)
-            throw new InvalidArgumentsCountException("POP", 0, argumentsList.size());
+            throw new InvalidArgumentsCountException("POP", 0, argumentsList.size(), context.getStep());
 
         System.out.println(context.pop());
 

@@ -1,5 +1,5 @@
 #Test it
-DEFINE A 0
+DEFINE A B
 PUSH A
 POP B
 PRINT

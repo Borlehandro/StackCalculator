@@ -25,21 +25,19 @@ public class Main {
         CommandFactory factory = new CommandFactory();
         CalculationContext context = new CalculationContext();
 
-        long stepCount = 0;
         try (Parser parser = new Parser(filename)) {
             while (parser.ready()) {
 
-                stepCount++;
+                context.next();
 
                 try {
+
                     Map.Entry<String, ArgumentsList> commandLine = parser.parseLine();
                     Command command = factory.create(commandLine.getKey());
                     command.execute(commandLine.getValue(), context);
                 } catch (InvalidVarNameException | InvalidArgumentTypeException | InvalidArgumentsCountException
                         | CalculationStackException | UnknownCommandException e) {
 
-                    // Todo can i send step into exception?
-                    System.err.println("Skip step " + stepCount + ":");
                     System.err.println(e.getMessage());
 
                 }

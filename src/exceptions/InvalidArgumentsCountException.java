@@ -1,12 +1,12 @@
 package exceptions;
 
-public class InvalidArgumentsCountException extends Exception {
+public class InvalidArgumentsCountException extends ExecuteTimeException {
 
-    int normal, current;
-    String operation;
+    private int normal, current;
+    private String operation;
 
-    public InvalidArgumentsCountException(String operation, int normal, int current) {
-        super("InvalidArgumentsCountException");
+    public InvalidArgumentsCountException(String operation, int normal, int current, long step) {
+        super(step);
         this.normal = normal;
         this.current = current;
         this.operation = operation;
@@ -14,7 +14,7 @@ public class InvalidArgumentsCountException extends Exception {
 
     @Override
     public String getMessage() {
-        return "Incorrect arguments number for operation \"" + operation + "\" : " + current + " instead of " + normal;
+        return "Incorrect arguments number for operation \"" + operation + "\" in step " + step + " - " + current + " instead of " + normal;
     }
 
 }
