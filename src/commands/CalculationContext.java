@@ -1,5 +1,7 @@
 package commands;
 
+import exceptions.CalculationStackException;
+
 import java.util.*;
 
 public class CalculationContext {
@@ -15,13 +17,19 @@ public class CalculationContext {
         stack.push(s);
     }
 
-    public Double pop() throws EmptyStackException {
-        if(stack.size() == 0)
-            throw new EmptyStackException();
+    public Double pop() throws CalculationStackException {
+        if(stack.size() == 0) {
+            throw new CalculationStackException();
+        }
         return stack.pop();
     }
 
-    public Double getTop() {
+    public Double getTop() throws CalculationStackException {
+
+        if(stack.size() == 0) {
+            throw new CalculationStackException();
+        }
+
         return stack.peek();
     }
 

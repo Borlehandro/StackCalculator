@@ -2,10 +2,7 @@ import commands.ArgumentsList;
 import commands.CalculationContext;
 import commands.types.Command;
 import commands.CommandFactory;
-import exceptions.EmptyStackException;
-import exceptions.InvalidArgumentTypeException;
-import exceptions.InvalidArgumentsCountException;
-import exceptions.InvalidVarNameException;
+import exceptions.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,13 +29,27 @@ public class Main {
         try (Parser parser = new Parser(filename)) {
             while (parser.ready()) {
                 Map.Entry<String, ArgumentsList> commandLine = parser.parseLine();
-
-                // Is it good idea?
-                // System.err.println(commandLine.getKey());
                 Command command = factory.create(commandLine.getKey());
                 command.execute(commandLine.getValue(), context);
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidVarNameException e) {
+            System.err.println("Invalid var name");
+            System.err.println(e.getMessage());
+        } catch (InvalidArgumentTypeException e) {
+            System.err.println("Invalid arg type");
+            System.err.println(e.getMessage());
+        } catch (InvalidArgumentsCountException e) {
+            System.err.println("Invalid arg count");
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+        } catch (CalculationStackException e) {
+            System.err.println("STACK");
+        } catch (UnknownCommandException e) {
+            System.err.println("Unknown command");
+        }
+        /*catch (IOException e) {
             System.err.println("Can not parse file");
             System.err.println(e.getMessage());
         } catch (InvalidArgumentsCountException e) {
@@ -54,6 +65,7 @@ public class Main {
             System.err.println("Empty stack");
             // e.printStackTrace();
         }
+        }*/
 
         // System.err.println(command.getClass());
     }
