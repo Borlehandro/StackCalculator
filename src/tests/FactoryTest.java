@@ -14,6 +14,7 @@ class FactoryTest {
 
         CommandFactory factory = new CommandFactory();
 
+        // Some incorrect commands examples
         assertThrows(UnknownCommandException.class, () -> factory.create("t"));
         assertThrows(UnknownCommandException.class, () -> factory.create("e"));
         assertThrows(UnknownCommandException.class, () -> factory.create("$"));
@@ -42,7 +43,7 @@ class FactoryTest {
             assertEquals(factory.create("#+").getClass(), CommentCommand.class);
 
         } catch (UnknownCommandException e) {
-            assertTrue(true);
+            fail(e.getMessage());
         }
     }
 }

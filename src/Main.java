@@ -35,11 +35,9 @@ public class Main {
                     Map.Entry<String, ArgumentsList> commandLine = parser.parseLine();
                     Command command = factory.create(commandLine.getKey());
                     command.execute(commandLine.getValue(), context);
-                } catch (InvalidVarNameException | InvalidArgumentTypeException | InvalidArgumentsCountException
-                        | CalculationStackException | UnknownCommandException e) {
 
+                } catch (ExecuteTimeException | UnknownCommandException e) {
                     System.err.println(e.getMessage());
-
                 }
 
                 // And I just continue it!
