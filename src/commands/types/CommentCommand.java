@@ -5,13 +5,9 @@ import commands.CalculationContext;
 
 public class CommentCommand implements Command {
 
+    // Todo output real comments!
     @Override
     public void execute(ArgumentsList argumentsList, CalculationContext context) {
-        if(argumentsList.size()!=0) {
-            System.out.print("// ");
-            for (String arg : argumentsList)
-                System.out.print(arg + " ");
-            System.out.println();
-        }
+        System.out.println("//Comment line");
     }
 }

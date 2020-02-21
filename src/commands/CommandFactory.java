@@ -10,15 +10,21 @@ import java.util.Properties;
 
 public class CommandFactory {
 
-    // Todo debug using comment line
     public Command create(String type) throws UnknownCommandException {
         try {
             Properties prop = new Properties();
             InputStream in = this.getClass().getResourceAsStream("/commands/commands_config.properties");
             prop.load(in);
-            String className = prop.getProperty(type);
+            String className;
+
+            if(type.startsWith("#"))
+                className = prop.getProperty("#");
+            else
+                className = prop.getProperty(type);
+
             // System.out.println(type + "-" + className);
-            if (className==null)
+
+            if(className==null)
                 throw new UnknownCommandException(type);
             return (Command)Class.forName(className).getDeclaredConstructor().newInstance();
         } catch (IOException | ClassNotFoundException | NoSuchMethodException
