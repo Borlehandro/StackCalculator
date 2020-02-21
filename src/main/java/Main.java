@@ -3,11 +3,15 @@ import commands.CalculationContext;
 import commands.types.Command;
 import commands.CommandFactory;
 import exceptions.*;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.Map;
 
 public class Main {
+
+    private static Logger logger = Logger.getLogger(Main.class);
+
     public static void main(String[] args) {
 
         String filename = null;
