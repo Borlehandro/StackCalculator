@@ -13,7 +13,7 @@ public class PushCommand implements Command {
             throws InvalidArgumentsCountException, InvalidVarNameException {
 
         if(argumentsList.size()!=1)
-            throw new InvalidArgumentsCountException();
+            throw new InvalidArgumentsCountException("PUSH", 1, argumentsList.size());
 
         String argument = argumentsList.get(0);
         Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
@@ -24,6 +24,6 @@ public class PushCommand implements Command {
         else if(context.containsVar(argument))
             context.push(context.getValue(argument));
 
-        else throw new InvalidVarNameException();
+        else throw new InvalidVarNameException(argument);
     }
 }

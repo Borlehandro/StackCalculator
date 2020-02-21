@@ -11,7 +11,7 @@ public class PrintCommand implements Command {
             throws InvalidArgumentsCountException, CalculationStackException {
 
         if(argumentsList.size()!=0)
-            throw new InvalidArgumentsCountException();
+            throw new InvalidArgumentsCountException("PRINT", 0, argumentsList.size());
 
         System.err.println(context.getTop());
 

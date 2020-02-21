@@ -10,7 +10,7 @@ public class MultiplyCommand implements Command {
     public void execute(ArgumentsList argumentsList, CalculationContext context) throws InvalidArgumentsCountException, CalculationStackException {
 
         if (argumentsList.size() != 0)
-            throw new InvalidArgumentsCountException();
+            throw new InvalidArgumentsCountException("*", 0, argumentsList.size());
 
         context.push(context.pop() * context.pop());
 

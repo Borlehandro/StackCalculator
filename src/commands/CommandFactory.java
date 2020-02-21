@@ -9,6 +9,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 public class CommandFactory {
+
+    // Todo debug using comment line
     public Command create(String type) throws UnknownCommandException {
         try {
             Properties prop = new Properties();
@@ -17,7 +19,7 @@ public class CommandFactory {
             String className = prop.getProperty(type);
             // System.out.println(type + "-" + className);
             if (className==null)
-                throw new UnknownCommandException();
+                throw new UnknownCommandException(type);
             return (Command)Class.forName(className).getDeclaredConstructor().newInstance();
         } catch (IOException | ClassNotFoundException | NoSuchMethodException
                 | IllegalAccessException | InvocationTargetException | InstantiationException e) {

@@ -14,7 +14,7 @@ public class PlusCommand implements Command {
             throws InvalidArgumentsCountException, EmptyStackException, CalculationStackException {
 
         if (argumentsList.size() != 0)
-            throw new InvalidArgumentsCountException();
+            throw new InvalidArgumentsCountException("+", 0, argumentsList.size());
 
         context.push(context.pop() + context.pop());
     }
