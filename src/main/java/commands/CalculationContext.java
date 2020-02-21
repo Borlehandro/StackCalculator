@@ -1,10 +1,13 @@
 package commands;
 
 import exceptions.CalculationStackException;
+import org.apache.log4j.Logger;
 
 import java.util.*;
 
 public class CalculationContext {
+
+    private static Logger logger = Logger.getLogger(CalculationContext.class);
 
     private LinkedList<Double> stack = new LinkedList<>();
     private Map<String, Double> definitions = new HashMap<>();
@@ -44,6 +47,7 @@ public class CalculationContext {
 
     public void next() {
         step++;
+        logger.info("Next calculation step. Step counter == " + step);
     }
 
     public long getStep() {

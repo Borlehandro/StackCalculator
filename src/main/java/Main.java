@@ -20,6 +20,7 @@ public class Main {
             filename = args[0];
         else {
             try (BufferedReader reader = new BufferedReader(System.console().reader())) {
+                logger.info("Try to get filename from console");
                 filename = reader.readLine();
             } catch (IOException e) {
                 e.printStackTrace();

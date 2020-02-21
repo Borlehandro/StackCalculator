@@ -22,3 +22,75 @@
 2020-02-22 02:25:15 ERROR CommandFactory:35 - Unknown command "LALA". Throw exception.
 2020-02-22 02:25:15 INFO  CommandFactory:19 - Try to create command with type "PRINT"
 2020-02-22 02:25:15 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 02:49:50 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 02:49:50 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:50 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 02:49:50 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 02:49:50 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 02:49:50 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 02:49:50 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 02:49:50 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:50 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 02:49:50 INFO  CalculationContext:23 - Parse new line: "DEFINE A B"
+2020-02-22 02:49:50 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 02:49:51 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 02:49:51 INFO  DefineCommand:17 - Try to define A=B
+2020-02-22 02:49:51 ERROR DefineCommand:28 - Invalid type of argument "A=A"
+2020-02-22 02:49:51 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:51 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 02:49:51 INFO  CalculationContext:23 - Parse new line: "PUSH A"
+2020-02-22 02:49:51 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 02:49:51 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 02:49:51 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:51 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 02:49:51 INFO  CalculationContext:23 - Parse new line: "POP B"
+2020-02-22 02:49:51 INFO  CommandFactory:19 - Try to create command with type "POP"
+2020-02-22 02:49:51 INFO  CommandFactory:38 - Create command of class "commands.types.PopCommand"
+2020-02-22 02:49:51 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:51 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 02:49:51 INFO  CalculationContext:23 - Parse new line: "LALA"
+2020-02-22 02:49:51 INFO  CommandFactory:19 - Try to create command with type "LALA"
+2020-02-22 02:49:51 ERROR CommandFactory:35 - Unknown command "LALA". Throw exception.
+2020-02-22 02:49:51 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:49:51 INFO  CalculationContext:50 - Next calculation step. Step counter == 6
+2020-02-22 02:49:51 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 02:49:51 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 02:49:51 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 02:49:51 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 02:49:51 INFO  CalculationContext:40 - Close parser.
+2020-02-22 02:50:53 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 02:50:53 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 02:50:53 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "DEFINE A B"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 02:50:53 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 02:50:53 INFO  DefineCommand:17 - Try to define A=B
+2020-02-22 02:50:53 ERROR DefineCommand:28 - Invalid type of argument "A=B"
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "PUSH A"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 02:50:53 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "POP B"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "POP"
+2020-02-22 02:50:53 INFO  CommandFactory:38 - Create command of class "commands.types.PopCommand"
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "LALA"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "LALA"
+2020-02-22 02:50:53 ERROR CommandFactory:35 - Unknown command "LALA". Throw exception.
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 02:50:53 INFO  CalculationContext:50 - Next calculation step. Step counter == 6
+2020-02-22 02:50:53 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 02:50:53 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 02:50:53 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 02:50:53 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 02:50:53 INFO  CalculationContext:40 - Close parser.
