@@ -13,7 +13,7 @@ public class CommandFactory {
     public Command create(String type) throws UnknownCommandException {
         try {
             Properties prop = new Properties();
-            InputStream in = this.getClass().getResourceAsStream("/commands/commands_config.properties");
+            InputStream in = this.getClass().getResourceAsStream("/commands_config.properties");
             prop.load(in);
             String className;
 
