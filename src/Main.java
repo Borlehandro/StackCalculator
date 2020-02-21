@@ -10,7 +10,8 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        String filename = "../res/default.txt";
+        String filename = null;
+
         if (args.length != 0)
             filename = args[0];
         else {

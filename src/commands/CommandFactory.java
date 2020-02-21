@@ -17,6 +17,7 @@ public class CommandFactory {
             prop.load(in);
             String className;
 
+            // Todo Is it good idea?
             if(type.startsWith("#"))
                 className = prop.getProperty("#");
             else
