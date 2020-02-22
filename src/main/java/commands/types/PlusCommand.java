@@ -22,6 +22,8 @@ public class PlusCommand implements Command {
             throw new InvalidArgumentsCountException("+", 0, argumentsList.size(), context.getStep());
         }
 
+        logger.info("Try to push sum result");
+
         context.push(context.pop() + context.pop());
     }
 }

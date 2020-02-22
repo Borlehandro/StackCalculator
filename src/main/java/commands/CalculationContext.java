@@ -19,12 +19,14 @@ public class CalculationContext {
 
     public void push(Double s) {
         stack.push(s);
+        logger.info("Pushed " + s);
     }
 
     public Double pop() throws CalculationStackException {
         if(stack.size() == 0) {
             throw new CalculationStackException(step);
         }
+        logger.info("Popped " + stack.peek());
         return stack.pop();
     }
 

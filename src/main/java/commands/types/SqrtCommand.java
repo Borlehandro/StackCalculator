@@ -14,14 +14,15 @@ public class SqrtCommand implements Command {
     public void execute(ArgumentsList argumentsList, CalculationContext context)
             throws InvalidArgumentsCountException, CalculationStackException {
 
+        logger.info("Count sqrt");
+
         if (argumentsList.size() != 0) {
             logger.error("Invalid number of arguments: " + argumentsList.size()
                     + "instead of NO ARGUMENTS. Throw exception." );
             throw new InvalidArgumentsCountException("SQRT", 0, argumentsList.size(), context.getStep());
         }
 
-        // Todo complex square?
+        // For incorrect input, it returns NaN
         context.push(Math.sqrt(context.pop()));
-
     }
 }

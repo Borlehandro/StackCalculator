@@ -18,6 +18,9 @@ public class DivideCommand implements Command {
                     + "instead of NO ARGUMENTS. Throw exception." );
             throw new InvalidArgumentsCountException("DEFINE", 0, argumentsList.size(), context.getStep());
         }
+
+        logger.info("Try to push division result");
+
         context.push(context.pop() / context.pop());
     }
 }

@@ -12,6 +12,6 @@ public class CommentCommand implements Command {
     @Override
     public void execute(ArgumentsList argumentsList, CalculationContext context) {
         logger.info("Comment in line " + context.getStep());
-        System.out.println("//Comment line");
+        System.out.println("//Comment line " + context.getStep());
     }
 }

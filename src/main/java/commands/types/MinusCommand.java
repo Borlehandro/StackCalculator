@@ -19,6 +19,8 @@ public class MinusCommand implements Command {
             throw new InvalidArgumentsCountException("-", 0, argumentsList.size(), context.getStep());
         }
 
+        logger.info("Try to push subtraction result");
+
         context.push(context.pop() - context.pop());
     }
 }

@@ -42,6 +42,7 @@ public class Main {
                     command.execute(commandLine.getValue(), context);
 
                 } catch (ExecuteTimeException | UnknownCommandException e) {
+                    logger.error("Catch exception: " + e.getMessage());
                     System.err.println(e.getMessage());
                 }
 
@@ -49,6 +50,9 @@ public class Main {
 
             }
         } catch (IOException e) {
+
+            logger.error("IOException while reading data: " + e.getMessage());
+
             e.printStackTrace();
         }
     }

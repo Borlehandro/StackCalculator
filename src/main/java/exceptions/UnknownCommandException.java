@@ -5,7 +5,6 @@ public class UnknownCommandException extends Exception {
     private String command;
 
     public UnknownCommandException(String command) {
-        super("UnknownCommandException");
         this.command = command;
     }
 

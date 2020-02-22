@@ -16,6 +16,8 @@ public class PushCommand implements Command {
     public void execute(ArgumentsList argumentsList, CalculationContext context)
             throws InvalidArgumentsCountException, InvalidVarNameException {
 
+        logger.info("Try to push value");
+
         if(argumentsList.size()!=1) {
             logger.error("Invalid number of arguments: " + argumentsList.size()
                     + "instead of" + 1 + ". Throw exception." );
@@ -25,11 +27,15 @@ public class PushCommand implements Command {
         String argument = argumentsList.get(0);
         Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 
-        if(pattern.matcher(argument).matches())
+        if(pattern.matcher(argument).matches()) {
+            logger.info("Push double " + argument);
             context.push(Double.parseDouble(argumentsList.get(0)));
+        }
 
-        else if(context.containsVar(argument))
+        else if(context.containsVar(argument)) {
+            logger.info("Push value of variable " + argument);
             context.push(context.getValue(argument));
+        }
 
         else {
             logger.error("Invalid name of var: \"" + argument +"\". Throw exception.");

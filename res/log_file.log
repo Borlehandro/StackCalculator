@@ -256,3 +256,187 @@
 2020-02-22 11:50:13 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
 2020-02-22 11:50:13 INFO  CalculationContext:34 - Parser is not ready.
 2020-02-22 11:50:13 INFO  CalculationContext:40 - Close parser.
+2020-02-22 12:05:22 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:23 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 12:05:23 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 12:05:23 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 12:05:23 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 12:05:23 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:23 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 12:05:23 INFO  CalculationContext:23 - Parse new line: "DEFINE A B"
+2020-02-22 12:05:23 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:05:23 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:05:23 INFO  DefineCommand:20 - Try to define A=B
+2020-02-22 12:05:23 ERROR DefineCommand:44 - Invalid name of var for copping: "B". Throw exception.
+2020-02-22 12:05:23 ERROR Main:45 - Catch exception: Can not use undefined variable: "B" in step 2
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:23 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 12:05:23 INFO  CalculationContext:23 - Parse new line: "PUSH A"
+2020-02-22 12:05:23 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 12:05:23 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 12:05:23 INFO  DefineCommand:19 - Try to push value
+2020-02-22 12:05:23 ERROR DefineCommand:41 - Invalid name of var: "A". Throw exception.
+2020-02-22 12:05:23 ERROR Main:45 - Catch exception: Can not use undefined variable: "A" in step 3
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:23 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 12:05:23 INFO  CalculationContext:23 - Parse new line: "POP B"
+2020-02-22 12:05:23 INFO  CommandFactory:19 - Try to create command with type "POP"
+2020-02-22 12:05:23 INFO  CommandFactory:38 - Create command of class "commands.types.PopCommand"
+2020-02-22 12:05:23 INFO  DefineCommand:19 - Try to pop value from stack
+2020-02-22 12:05:23 ERROR DefineCommand:22 - Invalid number of arguments: 1instead of NO ARGUMENTS. Throw exception.
+2020-02-22 12:05:23 ERROR Main:45 - Catch exception: Incorrect arguments number for operation "POP" in step 4 - 1 instead of 0
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:23 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 12:05:23 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 12:05:23 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 12:05:23 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 12:05:23 INFO  DefineCommand:17 - Try to print value from stack
+2020-02-22 12:05:23 ERROR Main:45 - Catch exception: Can not pop from stack in step 5. Stack is empty!
+2020-02-22 12:05:23 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 12:05:23 INFO  CalculationContext:40 - Close parser.
+2020-02-22 12:05:44 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:44 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 12:05:44 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 12:05:44 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 12:05:44 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 12:05:44 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:44 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 12:05:44 INFO  CalculationContext:23 - Parse new line: "DEFINE A B"
+2020-02-22 12:05:44 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:05:44 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:05:44 INFO  DefineCommand:20 - Try to define A=B
+2020-02-22 12:05:44 ERROR DefineCommand:44 - Invalid name of var for copping: "B". Throw exception.
+2020-02-22 12:05:44 ERROR Main:45 - Catch exception: Can not use undefined variable: "B" in step 2
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:44 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 12:05:44 INFO  CalculationContext:23 - Parse new line: "PUSH A"
+2020-02-22 12:05:44 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 12:05:44 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 12:05:44 INFO  DefineCommand:19 - Try to push value
+2020-02-22 12:05:44 ERROR DefineCommand:41 - Invalid name of var: "A". Throw exception.
+2020-02-22 12:05:44 ERROR Main:45 - Catch exception: Can not use undefined variable: "A" in step 3
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:44 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 12:05:44 INFO  CalculationContext:23 - Parse new line: "POP"
+2020-02-22 12:05:44 INFO  CommandFactory:19 - Try to create command with type "POP"
+2020-02-22 12:05:44 INFO  CommandFactory:38 - Create command of class "commands.types.PopCommand"
+2020-02-22 12:05:44 INFO  DefineCommand:19 - Try to pop value from stack
+2020-02-22 12:05:44 ERROR Main:45 - Catch exception: Can not pop from stack in step 4. Stack is empty!
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:05:44 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 12:05:44 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 12:05:44 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 12:05:44 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 12:05:44 INFO  DefineCommand:17 - Try to print value from stack
+2020-02-22 12:05:44 ERROR Main:45 - Catch exception: Can not pop from stack in step 5. Stack is empty!
+2020-02-22 12:05:44 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 12:05:44 INFO  CalculationContext:40 - Close parser.
+2020-02-22 12:06:11 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:11 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 12:06:11 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 12:06:11 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 12:06:11 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 12:06:11 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:11 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 12:06:11 INFO  CalculationContext:23 - Parse new line: "DEFINE A 2"
+2020-02-22 12:06:11 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:11 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:11 INFO  DefineCommand:20 - Try to define A=2
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:11 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 12:06:11 INFO  CalculationContext:23 - Parse new line: "DEFINE B A"
+2020-02-22 12:06:11 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:11 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:11 INFO  DefineCommand:20 - Try to define B=A
+2020-02-22 12:06:11 INFO  DefineCommand:39 - Copy value of variable A to variable B
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:11 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 12:06:11 INFO  CalculationContext:23 - Parse new line: "PUSH B"
+2020-02-22 12:06:11 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 12:06:11 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 12:06:11 INFO  DefineCommand:19 - Try to push value
+2020-02-22 12:06:11 INFO  DefineCommand:36 - Push value of variable B
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:11 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 12:06:11 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 12:06:11 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 12:06:11 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 12:06:11 INFO  DefineCommand:17 - Try to print value from stack
+2020-02-22 12:06:11 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 12:06:11 INFO  CalculationContext:40 - Close parser.
+2020-02-22 12:06:48 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:48 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 12:06:48 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 12:06:48 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 12:06:48 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 12:06:48 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:48 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 12:06:48 INFO  CalculationContext:23 - Parse new line: "DEFINE A 2"
+2020-02-22 12:06:48 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:48 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:48 INFO  DefineCommand:20 - Try to define A=2
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:48 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 12:06:48 INFO  CalculationContext:23 - Parse new line: "DEFINE B A"
+2020-02-22 12:06:48 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:48 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:48 INFO  DefineCommand:20 - Try to define B=A
+2020-02-22 12:06:48 INFO  DefineCommand:39 - Copy value of variable A to variable B
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:48 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 12:06:48 INFO  CalculationContext:23 - Parse new line: "PUSH B"
+2020-02-22 12:06:48 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 12:06:48 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 12:06:48 INFO  DefineCommand:19 - Try to push value
+2020-02-22 12:06:48 INFO  DefineCommand:36 - Push value of variable B
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:48 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 12:06:48 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 12:06:48 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 12:06:48 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 12:06:48 INFO  DefineCommand:17 - Try to print value from stack
+2020-02-22 12:06:48 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 12:06:48 INFO  CalculationContext:40 - Close parser.
+2020-02-22 12:06:57 INFO  CalculationContext:15 - Create parser for file: "res/test.txt"
+2020-02-22 12:06:57 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:57 INFO  CalculationContext:50 - Next calculation step. Step counter == 1
+2020-02-22 12:06:57 INFO  CalculationContext:23 - Parse new line: "#Test it"
+2020-02-22 12:06:57 INFO  CommandFactory:19 - Try to create command with type "#Test"
+2020-02-22 12:06:57 INFO  CommandFactory:38 - Create command of class "commands.types.CommentCommand"
+2020-02-22 12:06:57 INFO  CommentCommand:14 - Comment in line 1
+2020-02-22 12:06:57 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:57 INFO  CalculationContext:50 - Next calculation step. Step counter == 2
+2020-02-22 12:06:57 INFO  CalculationContext:23 - Parse new line: "DEFINE A 2"
+2020-02-22 12:06:57 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:57 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:57 INFO  DefineCommand:20 - Try to define A=2
+2020-02-22 12:06:58 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:58 INFO  CalculationContext:50 - Next calculation step. Step counter == 3
+2020-02-22 12:06:58 INFO  CalculationContext:23 - Parse new line: "DEFINE B A"
+2020-02-22 12:06:58 INFO  CommandFactory:19 - Try to create command with type "DEFINE"
+2020-02-22 12:06:58 INFO  CommandFactory:38 - Create command of class "commands.types.DefineCommand"
+2020-02-22 12:06:58 INFO  DefineCommand:20 - Try to define B=A
+2020-02-22 12:06:58 INFO  DefineCommand:39 - Copy value of variable A to variable B
+2020-02-22 12:06:58 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:58 INFO  CalculationContext:50 - Next calculation step. Step counter == 4
+2020-02-22 12:06:58 INFO  CalculationContext:23 - Parse new line: "PUSH B"
+2020-02-22 12:06:58 INFO  CommandFactory:19 - Try to create command with type "PUSH"
+2020-02-22 12:06:58 INFO  CommandFactory:38 - Create command of class "commands.types.PushCommand"
+2020-02-22 12:06:58 INFO  DefineCommand:19 - Try to push value
+2020-02-22 12:06:58 INFO  DefineCommand:36 - Push value of variable B
+2020-02-22 12:06:58 INFO  CalculationContext:34 - Parser is ready.
+2020-02-22 12:06:58 INFO  CalculationContext:50 - Next calculation step. Step counter == 5
+2020-02-22 12:06:58 INFO  CalculationContext:23 - Parse new line: "PRINT"
+2020-02-22 12:06:58 INFO  CommandFactory:19 - Try to create command with type "PRINT"
+2020-02-22 12:06:58 INFO  CommandFactory:38 - Create command of class "commands.types.PrintCommand"
+2020-02-22 12:06:58 INFO  DefineCommand:17 - Try to print value from stack
+2020-02-22 12:06:58 INFO  CalculationContext:34 - Parser is not ready.
+2020-02-22 12:06:58 INFO  CalculationContext:40 - Close parser.
