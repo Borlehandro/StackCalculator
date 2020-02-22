@@ -113,7 +113,7 @@ public class CommandsExecuteTest {
     }
 
     @Test
-    void testDefine() {
+    void testDefineNewValue() {
 
         ArgumentsList list = new ArgumentsList("Variable", "2");
         CalculationContext context = new CalculationContext();
@@ -121,7 +121,24 @@ public class CommandsExecuteTest {
         try {
             new DefineCommand().execute(list, context);
             assertEquals(context.getValue("Variable"), 2d);
-        } catch (InvalidArgumentsCountException | InvalidArgumentTypeException e) {
+        } catch (InvalidArgumentsCountException | InvalidArgumentTypeException | InvalidVarNameException e) {
+            fail(e.getMessage());
+        }
+
+    }
+
+    @Test
+    void testCopyDefine() {
+
+        ArgumentsList list = new ArgumentsList("a", "2");
+        CalculationContext context = new CalculationContext();
+
+        try {
+            new DefineCommand().execute(list, context);
+            ArgumentsList list2 = new ArgumentsList("b", "a");
+            new DefineCommand().execute(list2, context);
+            assertEquals(context.getValue("b"), 2d);
+        } catch (InvalidArgumentsCountException | InvalidArgumentTypeException | InvalidVarNameException e) {
             fail(e.getMessage());
         }
 
